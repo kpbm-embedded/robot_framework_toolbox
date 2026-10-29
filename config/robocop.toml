@@ -1,0 +1,10 @@
+# robocop (lint + format) settings for ./robot-box lint|format. Rules: robocop list rules
+[tool.robocop]
+language = ["en"]
+
+[tool.robocop.lint]
+# Renode keyword files and the Zephyr twister suites keep Renode's naming and long Execute Command lines
+ignore = ["line-too-long", "missing-doc-test-case", "missing-doc-keyword", "too-many-calls-in-test-case"]
+
+[tool.robocop.format]
+space-count = 4

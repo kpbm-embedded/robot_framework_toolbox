@@ -1,0 +1,14 @@
+# Zephyr's twister runs shell.robot through renode-test (harness: robot) on Renode boards.
+# ./robot-box twister -p riscv32_virtual -T <this folder>   (renode-test is the robot-box shim)
+sample:
+  name: twister robot harness
+tests:
+  examples.robot.shell:
+    harness: robot
+    harness_config:
+      robot_testsuite: shell.robot
+    platform_allow:
+      - riscv32_virtual
+    integration_platforms:
+      - riscv32_virtual
+    tags: [robot, renode, shell]

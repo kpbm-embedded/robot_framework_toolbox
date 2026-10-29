@@ -1,0 +1,5 @@
+#!/bin/sh
+# renode-test on PATH for Zephyr's twister (harness: robot): Renode's runner with this ID's Robot Framework.
+# Twister runs it from the test's build folder and reads only the exit code: results stay in that folder.
+ROOT=$(cd -P "$(dirname "$0")/../.." && pwd -P)
+RBOX_RESULTS=${RBOX_RESULTS:-$PWD} exec "$ROOT/robot-box" renode "$@"

@@ -1,0 +1,21 @@
+# robot-box: only sources go into git. Everything below is downloaded, solved or produced again by
+# ./robot-box bootstrap | install | examples test (pins: pixi.toml + pixi.lock, pixi sha256 in robot-box).
+/.bin/
+/.pixi/
+/cache/
+/install/
+/native/
+/build/
+/log/
+/config/local.env
+# Robot Framework / renode-test output when run from inside the folder
+output.xml
+log.html
+report.html
+robot_output*.xml
+/snapshots/
+/logs/
+__pycache__/
+*.pyc
+.robocop_cache/
+.pabotsuitenames

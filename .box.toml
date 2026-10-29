@@ -1,0 +1,34 @@
+id = "32_30"
+name = "robot_framework"
+kind = "tool"
+status = "active"
+old_paths = []
+tags = ["embedded", "testing", "robot-framework", "zephyr", "renode", "qemu"]
+
+[backup]
+tier = "critical"
+
+[tool]
+name = "robot_framework"
+launcher = "robot-box"
+aliases = ["robot-box"]
+env_var = "BOX_ROBOT_FRAMEWORK"
+env_path = "."
+
+[scripts.robot-box]
+schema = 1
+kind = "launcher"
+path = "robot-box"
+summary = "launcher of the 32_30_robot_framework tool ID"
+interpreter = "sh"
+commands = ["help", "where", "bootstrap", "install", "update", "clean", "status", "doctor", "shell", "run", "test", "new", "examples", "native", "relocate", "pack", "robot", "pabot", "lint", "format", "libdoc", "renode", "zephyr", "twister"]
+dry_run_flag = "--dry-run"
+apply_flag = { clean = "--yes" }
+scope = "global"
+
+[scripts."test_smoke.sh"]
+schema = 1
+kind = "test"
+path = "tests/test_smoke.sh"
+summary = "smoke test of the launcher"
+interpreter = "bash"

@@ -1,0 +1,11 @@
+# robot-box twister -p riscv32_virtual -T @NAME@    (harness: robot, run in Renode by renode-test)
+sample:
+  name: @NAME@
+tests:
+  app.@NAME@.robot:
+    harness: robot
+    harness_config:
+      robot_testsuite: @NAME@.robot
+    platform_allow: [riscv32_virtual]
+    integration_platforms: [riscv32_virtual]
+    tags: robot
