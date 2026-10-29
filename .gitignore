@@ -2,7 +2,7 @@
 # ./robot-box bootstrap | install | examples test (pins: pixi.toml + pixi.lock, pixi sha256 in robot-box).
 /.bin/
 /.pixi/
-/cache/
+/cache
 /install/
 /native/
 /build/
